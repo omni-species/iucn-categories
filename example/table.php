@@ -16,7 +16,7 @@ $status = new iucnCategories;
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($status->getIucnCategories() as $key => $value): ?>
+				<?php foreach ($status->getCategories() as $key => $value): ?>
 				<tr scope="row">
 					<td><?= strtoupper($key); ?></td>
 					<td><?= $value->name; ?></td>
