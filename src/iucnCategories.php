@@ -26,7 +26,7 @@ class iucnCategories
 	 *
 	 * @return array|null
 	 */
-	public function getIucnCategories(): ?object
+	public function getCategories(): ?object
 	{
 		// Checking for file.
 		if (!file_exists($this->categories))
