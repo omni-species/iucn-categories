@@ -1,0 +1,34 @@
+{
+	"name": "omnispecies/iucn-categories",
+	"description": "An utility package to retrieve and manipulate IUCN Categories from iucnCategories.min.json",
+	"keywords": [
+		"IUCN",
+		"RedList",
+		"Conservation",
+		"Threatened",
+		"Species"
+	],
+	"homepage": "https://www.omnispecies.com",
+	"license": "GPL-3.0 License",
+	"authors": [
+		{
+			"name": "Omni Species",
+			"email": "admin@omnispecies.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Felipe Abranches de Araujo Porto",
+			"email": "felipeabranches@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.5.0",
+		"omnispecies/iucn-categories-json": "1.0.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"OmniSpecies\\iucnCategories\\": "src"
+		}
+	}
+}
