@@ -10,7 +10,7 @@ $status = new iucnCategories;
 	</head>
 
 	<body class="iucn">
-		<?php foreach ($status->getIucnCategories() as $key => $value): ?>
+		<?php foreach ($status->getCategories() as $key => $value): ?>
 		<?php if ($key != 'ne') echo '-->'; ?><div class="iucn-category iucn-<?= $value->class; ?>">
 		<div class="iucn-name">
 			<div class="before<?php if (!$value->backward) echo ' none'; ?>"></div>
