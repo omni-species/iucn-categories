@@ -1,7 +1,7 @@
 <?php
 require '../src/iucnCategories.php';
 use OmniSpecies\iucnCategories\iucnCategories;
-$status = new iucnCategories;
+$iucn = new iucnCategories;
 ?>
 <html>
 	<head>
@@ -16,10 +16,10 @@ $status = new iucnCategories;
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($status->getCategories() as $key => $value): ?>
+				<?php foreach ($iucn->getCategories() as $key => $value): ?>
 				<tr scope="row">
 					<td><?= strtoupper($key); ?></td>
-					<td><?= $value->name; ?></td>
+					<td><a href="https://www.iucnredlist.org/search?redListCategory=<?= $key; ?>" target="_blank"><?= $value->name; ?></a></td>
 				</tr>
 				<?php endforeach; ?>
 			</tbody>

@@ -18,7 +18,7 @@ class iucnCategories
 	 */
 	public function __construct()
 	{
-		$this->categories = '../../iucn-categories-json/iucnCategories.min.json';
+		$this->categories = __DIR__ . '/../../iucn-categories-json/iucnCategories.min.json';
 	}
 
 	/**

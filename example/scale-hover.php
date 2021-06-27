@@ -1,7 +1,7 @@
 <?php
 require '../src/iucnCategories.php';
 use OmniSpecies\iucnCategories\iucnCategories;
-$status = new iucnCategories;
+$iucn = new iucnCategories;
 ?>
 <html>
 	<head>
@@ -10,12 +10,12 @@ $status = new iucnCategories;
 	</head>
 
 	<body class="iucn">
-		<?php foreach ($status->getCategories() as $key => $value): ?>
+		<?php foreach ($iucn->getCategories() as $key => $value): ?>
 		<?php if ($key != 'ne') echo '-->'; ?><div class="iucn-category iucn-<?= $value->class; ?>">
 		<div class="iucn-name">
-			<div class="before<?php if (!$value->backward) echo ' none'; ?>"></div>
+			<div class="before<?= (!$value->backward) ? ' none' : ''; ?>"></div>
 			<?= $value->name; ?>
-			<div class="after<?php if (!$value->forward) echo ' none'; ?>"></div>
+			<div class="after<?= (!$value->forward) ? ' none' : ''; ?>"></div>
 		</div>
 		<div class="iucn-acronym"><?= $key; ?></div>
 		</div><?php if ($key != 'ex') echo '<!--'; ?>
